@@ -8,6 +8,8 @@ https://serp.co/tools/css-reset/
 
 * {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 /**
  * 1. Correct the line height in all browsers.

@@ -6,10 +6,10 @@
     --dark-third-color: #927fbc;
     --dark-fourth-color: #c2baed;
         /* light-theme: */
-    --dark-main-color: #bcd8f1;
-    --dark-secondary-color: #80a7cc;
-    --dark-third-color: #3468a6;
-    --dark-fourth-color: #1e4378;
+    --light-main-color: #bcd8f1;
+    --light-secondary-color: #80a7cc;
+    --light-third-color: #3468a6;
+    --light-fourth-color: #1e4378;
 
     /* fonts */
 
