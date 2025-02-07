@@ -1,0 +1,9 @@
+@import url("./styles/variables.css");
+@import url("./styles/normilize.css");
+
+body {
+    font-family: var(--main-font), serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
