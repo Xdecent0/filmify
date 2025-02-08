@@ -82,7 +82,8 @@ https://serp.co/tools/css-reset/
    * Remove the gray background on active links in IE 10.
    */
   
-  a {
+  a, a:hover, a:focus, a:visited, a:active {
+    text-decoration: none;
     background-color: transparent;
   }
   
@@ -355,5 +356,9 @@ https://serp.co/tools/css-reset/
   
   [hidden] {
     display: none;
+  }
+
+  ul, ol {
+    list-style: none;
   }
   
