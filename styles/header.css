@@ -11,7 +11,7 @@
 }
 
 .logo {
-    width: 200px;
+    width: 50px;
     height: 50px;
 }
 
@@ -20,6 +20,7 @@
 }
 
 .header__menu-button {
+    z-index: 1;
     width: 40px;
     height: 40px;
 }
@@ -40,4 +41,36 @@
 .button {
     border: 2px solid #000;
     border-radius: 5px;
+}
+
+.header__menu {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+
+    background-color: var(--light-third-color);
+
+    transform: translateX(100%);
+}
+
+.header__menu--active {
+    transform: translateX(0);
+}
+
+.header__menu ul {
+    display: flex;
+
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    position: relative;
+    top: 70px;
+}
+
+.header__menu-link {
+    font-family: var(--main-font), serif;
+    font-size: 25px;
 }
