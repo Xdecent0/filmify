@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/about_us.css">
     <title>Filmify</title>
 </head>
 <body>
@@ -27,24 +28,88 @@
     <main>
         <div class="container">
             <section class="about">
-                <h2>About us</h2>
-            </section>
-            <section class="authors"></section>
-                <h2>Authors</h2>
+                <h2 class="about__title">About us</h2>
+                <p class="about__text">
+                    We are a small team of passionate developers specializing in game development for mobile and PC, 
+                    as well as creating mobile applications and websites. Our goal is to deliver high-quality digital experiences 
+                    that engage and inspire users.
+                </p>
+            
+                <h3 class="about__subtitle">Our Technologies</h3>
+                <ul class="about__list">
+                    <li class="about__item">
+                        <h3 class="about__tech-title">Game Development</h3>
+                        <ul class="about__sublist">
+                            <li class="about__subitem">Unity</li>
+                        </ul>
+                    </li>
+                    <li class="about__item">
+                        <h3 class="about__tech-title">Web Development</h3>
+                        <ul class="about__sublist">
+                            <li class="about__subitem">HTML</li>
+                            <li class="about__subitem">CSS</li>
+                            <li class="about__subitem">JS</li>
+                        </ul>
+                    </li>
+                    <li class="about__item">
+                        <h3 class="about__tech-title">Mobile Apps</h3>
+                        <ul class="about__sublist">
+                            <li class="about__subitem">React Native</li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <h3 class="about__subtitle">Our mission</h3>
+                <p class="about__text">
+                    We believe in creativity, innovation, and continuous learning. Every project we work on is driven by our passion 
+                    for technology and our commitment to excellence. Whether it’s an exciting mobile game, a powerful app, or a sleek website, 
+                    we always strive to push the boundaries of what's possible.
+                </p>
+            
+                <p class="about__footer">Join us on our journey as we bring new ideas to life!</p>
+            </section>            
+            <section class="authors">
+                <h2 class="authors__title">Authors</h2>
+                <ul class="authors__list">
+                    <li class="authors__item">
+                        <div class="authors__links">
+                            <a href="https://github.com/Xdecent0" target="_blank" class="authors__github-link">
+                                <img src="../assets/icons/github-mark.svg" alt="Github logo" width="24" class="authors__github-icon">
+                            </a>
+                            <h3 class="authors__name">Timofii "Xdecent" Tatarenko</h3>
+                        </div>
+                        <h4 class="authors__movies-title">Favorite movies & shows:</h4>
+                        <ul class="authors__movies-list">
+                            <li class="authors__movies-item">
+                                <!-- Иконка-ссылка и название фильма/сериала -->
+                            </li>
+                        </ul>
+                        
+                    </li>
+                </ul>
+            </section>            
             <section class="projects">
                 <h2>Our Projects</h2>
+                <ul class="projects__list">
+                    <li class="projects__item">
+                        <!-- Иконка-ссылка и название проекта + короткое описание-->
+                    </li>
+                </ul>
             </section>
         </div>
     </main>
     <footer class="footer">
-        <nav class="footer__nav">
             <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="../index.html" class="footer__link">Home</a>
+                </li>
                 <li class="footer__item">
                     <a href="./about_us.html" class="footer__link">About Us</a>
                 </li>
+                <li class="footer__item">
+                    <a href="./about_us.html" class="footer__link">Movies</a>
+                </li>
             </ul>
-        </nav>
-        
         <div class="footer__text">
             <p class="footer__author">made by DUET Students</p>
             <p class="footer__copyright">© 2025 All rights reserved</p>
