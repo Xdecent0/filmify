@@ -1,10 +1,17 @@
 .footer {
     background-color: var(--light-secondary-color);
+    padding-top: 20px;
 }
 
 .footer__list {
     display: flex;
     justify-content: space-around;
+}
+
+@media (min-width: 1024px) {
+    .footer__list {
+        justify-content: space-evenly;
+    }
 }
 
 .footer__text {
@@ -13,5 +20,5 @@
 }
 
 .footer__text p {
-    margin-top: 10px;
+    margin-top: 20px;
 }
