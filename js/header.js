@@ -5,7 +5,10 @@ const menu = document.querySelector('.header__menu');
 menuButton.addEventListener('click', function(){ 
     let imageFile = buttonImage.getAttribute('src');
 
-    if(menu.classList.toggle('header__menu--active')){ imageFile = imageFile.replace(/\w+.{1}\w+$/, 'cross.svg'); }
+    menuButton.classList.toggle('button--fixed');
+    if(menu.classList.toggle('header__menu--active')){ 
+        imageFile = imageFile.replace(/\w+.{1}\w+$/, 'cross.svg'); 
+    }
     else { imageFile = imageFile.replace(/\w+.{1}\w+$/, 'menu.svg'); }
         
     buttonImage.setAttribute('src', imageFile);
