@@ -1,7 +1,6 @@
 .authors__links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .about {
@@ -12,6 +11,10 @@
     border: 2px grey solid;
     padding: 5px;
     border-radius: 8px;
+}
+
+.authors__name {
+    margin-left: 3px;
 }
 
 .about__title {
@@ -28,6 +31,10 @@
 
 .authors__title {
     margin-bottom: 15px;
+}
+
+.authors__item + .authors__item {
+    margin-top: 10px;
 }
 
 .authors__movies-item {
