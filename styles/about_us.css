@@ -1,5 +1,90 @@
 .authors__links {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.about {
+    padding: 30px 0px;
+}
+
+.authors__item {
+    border: 2px grey solid;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.about__title {
+    margin-bottom: 15px;
+}
+
+.about__subtitle {
+    margin: 10px 0px;
+}
+
+.projects {
+    padding: 30px 0px;
+}
+
+.authors__title {
+    margin-bottom: 15px;
+}
+
+.authors__movies-item {
+    display: flex;
+    align-items: center;
+}
+
+.authors__movies-list {
+    margin-top: 10px;
+}
+
+.authors__movies-item + .authors__movies-item{
+    margin-top: 10px;
+}
+
+.authors__movies-image {
+    width: 15px;
+    height: 15px;
+    background-color: grey;
+    margin-right: 10px;
+}
+
+.authors__role {
+    margin: 10px 0px;
+}
+
+.projects__headline {
+    margin-bottom: 15px;
+}
+
+.projects__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    background-color: gray;
+    margin-bottom: 5px;
+}
+
+.projects__list {
+    display: flex;
+    justify-content: center;
+}
+
+.projects__item {
+    border: 2px grey solid;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.projects__tech-list {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.projects__tech-image {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(199, 199, 199);
 }
