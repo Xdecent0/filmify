@@ -24,3 +24,12 @@
     text-decoration: none;
     color: #000;
 }
+
+/* Modificators */
+.text--centered {
+    text-align: center;
+}
+
+.vertical-margin--big {
+    margin: 50px 0;
+}
