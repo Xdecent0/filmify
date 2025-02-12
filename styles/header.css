@@ -65,19 +65,31 @@
     border-radius: 5px;
 }
 
+.menu-background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;    
+}
+
 .header__menu {
     position: fixed;
     width: 50vw;
     height: 100vh;
     top: 0;
-    right: 0;
+    right: 0;    
 
     background-color: var(--light-third-color);
 
+    transition: 0.2s;
     transform: translateX(100%);
 }
 
 .header__menu--active {
+    transition: 0.2s;
     transform: translateX(0);
 }
 
@@ -112,6 +124,10 @@
         justify-content: center;
         background-color: transparent;
         transform: translateX(0);
+    }
+
+    .menu-background {
+        display: none;
     }
 
     .header__menu-button {
