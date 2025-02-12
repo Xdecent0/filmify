@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/movies.css">
+    <title>Filmify</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <a class="logo logo--medium" href="../index.html">
+                <img class="logo__icon" src="../assets/icons/temp-logo.svg">
+            </a>
+            <button class="button header__menu-button button--transparent" type="button"><img class="header__menu-button__icon" src="../assets/icons/menu.svg"></button>
+            <div class="background menu__background visually-hidden"></div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="../index.html" class="link header__menu-link">Home</a></li>
+                    <li><a href="#" class="link header__menu-link">Movies</a></li>
+                    <li><a href="#" class="link header__menu-link">Profile</a></li>
+                    <li><a href="./about_us.html" class="link header__menu-link">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__inner">
+                <div class="background main__background visually-hidden"></div>
+                <div class="popup-container main__popup-container">
+                    <button class="button popup-container__button">
+                        <img class="popup-container__close-icon" src="../assets/icons/cross.svg" alt="close_icon">
+                    </button>
+                    <form class="popup-container__form">
+                        <label for="genre">Genre</label>
+                        <select class="popup-container__form-select" name="genre" id="genre"></select>
+                        <label for="year">Year</label>
+                        <select class="popup-container__form-select" name="year" id="year"></select>
+                        <input class="popup-container__form-button" type="button" value="Watch!">
+                    </form>
+                </div>
+                <section class="main__filter-search">
+                    <div class="main__filter">
+                        <button class="button main__filter-button button--transparent" type="button">
+                            <img class="main__filter-button__icon" src="../assets/icons/filters.svg" alt="filter_icon">
+                            <p class="main__filter-text">Filters</p>
+                        </button>
+
+                        <form class="main__filter-search__form">
+                            <input class="main__filter-search__input" type="text" placeholder="Search">
+                            <button class="button main__filter-search__button button--transparent" type="button">
+                                <img class="button main__filter-search__icon" src="../assets/icons/search.svg" alt="search_icon">
+                            </button>
+                        </form>
+                    </div>
+                </section>
+                <section class="main__movies padding--medium">
+                    <ul class="main__movies-list">
+                        <li class="main__movies-item">
+                            <a href="#" class="link main__movies-item__link">
+                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
+                                <p class="main__movies-item__title">Title</p>
+                                <p class="main__movies-item__description">year, genre</p>
+                            </a>
+                        </li>
+                        <li class="main__movies-item">
+                            <a href="#" class="link main__movies-item__link">
+                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
+                                <p class="main__movies-item__title">Title</p>
+                                <p class="main__movies-item__description">year, genre</p>
+                            </a>
+                        </li>
+                        <li class="main__movies-item">
+                            <a href="#" class="link main__movies-item__link">
+                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
+                                <p class="main__movies-item__title">Title</p>
+                                <p class="main__movies-item__description">year, genre</p>
+                            </a>
+                        </li>
+                        <li class="main__movies-item">
+                            <a href="#" class="link main__movies-item__link">
+                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
+                                <p class="main__movies-item__title">Title</p>
+                                <p class="main__movies-item__description">year, genre</p>
+                            </a>
+                        </li>
+                        <li class="main__movies-item">
+                            <a href="#" class="link main__movies-item__link">
+                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
+                                <p class="main__movies-item__title">Title</p>
+                                <p class="main__movies-item__description">year, genre</p>
+                            </a>
+                        </li>                        
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="../index.html" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="./about_us.html" class="footer__link">About Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="./about_us.html" class="footer__link">Movies</a>
+                </li>
+            </ul>
+        <div class="footer__text">
+            <p class="footer__author">made by DUET Students</p>
+            <p class="footer__copyright">© 2025 All rights reserved</p>
+        </div>
+    </footer>    
+
+    <script src="../js/header.js"></script>
+    <script src="../js/movies.js"></script>
+
+</body>
+</html>

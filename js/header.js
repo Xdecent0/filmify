@@ -1,6 +1,6 @@
 const menuButton = document.querySelector('.header__menu-button');
 const buttonImage = menuButton.querySelector('.header__menu-button__icon');
-const menuBackground = document.querySelector('.menu-background');
+const menuBackground = document.querySelector('.menu__background');
 const menu = document.querySelector('.header__menu');
 
 menuButton.addEventListener('click', function(){ 
