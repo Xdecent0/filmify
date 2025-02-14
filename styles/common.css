@@ -76,3 +76,16 @@
 .padding--medium {
     padding: 5px;
 }
+
+.text-cut-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.link--disabled {
+    pointer-events: none;
+    cursor: default;
+}
