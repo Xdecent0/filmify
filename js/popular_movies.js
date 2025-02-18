@@ -15,7 +15,7 @@ async function getPopularMovies() {
             method: 'GET',
             headers: {
                 accept: 'application/json',
-                Authorization: `Bearer ${API_KEY}`
+                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYmJhMWMxZjg1YWU0ZTJhYzNiYzJhNjNhOTRlOGEyMyIsIm5iZiI6MTczNzk5NTY1OC45NDcsInN1YiI6IjY3OTdiNThhM2FlMzU1YzQ3ODhmNDA4ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kUNWul5PDKWbGwQvBbxomqF60G_bPaFgv_Vj3chTVuo'
             }
         });
         const data = await response.json();
