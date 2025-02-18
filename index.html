@@ -7,10 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Filmify</title>
 </head>
 <body>
-
+<div class="wrapper">
     <header class="header">
         <div class="header__inner">
             <a class="logo logo--medium" href="index.html">
@@ -30,10 +32,84 @@
     </header>
     <main>
         <div class="container">
-            <h1>Hello world</h1>
-            <h2>Hello Artemka</h2>
-            <h3>We are the best!</h3>
-            <h4>Testing commits!</h4>
+            <section class="greeting">
+                <h1 class="greeting__title">Welcome to Filmify – Your Ultimate Film Hub!</h1>
+                <p class="greeting__description">
+                    Filmify is your go-to platform for discovering, organizing, and interacting with movies. Explore detailed film pages, 
+                    save your favorites, create custom collections, and swipe through recommendations to find your next must-watch!
+                </p>
+                <div class="greeting__container">
+                    <ul class="greeting__cards">
+                        <li class="greeting__cards-item">
+                            <a href="" class="greeting__cards-link">
+                                <img src="./assets/icons/explore.svg" alt="Explore icon" class="greeting__cards-img">
+                            </a>
+                            <p class="greeting__cards-text">
+                                Explore movies
+                            </p>
+                        </li>
+                        <li class="greeting__cards-item">
+                            <a href="" class="greeting__cards-link">
+                                <img src="./assets/icons/save.svg" alt="Save icon" class="greeting__cards-img">
+                            </a>
+                            <p class="greeting__cards-text">
+                                Save favorites
+                            </p>
+                        </li>
+                        <li class="greeting__cards-item">
+                            <a href="" class="greeting__cards-link">
+                                <img src="./assets/icons/swipe.svg" alt="Swipe icon" class="greeting__cards-img">
+                            </a>
+                            <p class="greeting__cards-text">
+                                Swipe to like
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="popular">
+                <h2 class="popular__title">Popular movies</h2>
+                <!-- Популярные фильмы (самые просматриваемые или высокооцененные)
+                Новые релизы -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                </div>
+                </div>
+            </section>
+            <section class="collections">
+                <!-- можно показывать интересные подборки (например, "Лучшие фильмы 2024 года" или "ТОП-10 ужасов") -->
+                <!-- <h2 class="collections__title">Build, Customize & Share Your Movie Collections</h2>
+                <p class="collections__description">
+                    Tired of forgetting great movies? With MoviePort, you can create personalized collections, organize films by themes, and revisit them anytime!
+                </p> -->
+                <!-- imple collection slider with popular collections -->
+            </section>
+            <section class="genres">
+                <h2 class="genres__title">Popular genres</h2>
+                <div class="genres__container">
+                    <div class="genres__track" id="sliderTrack">
+                    </div>
+                </div>
+            </section>
+            <section class="functionality">
+                <h2 class="functionality__title">How It Works?</h2>
+                <p class="functionality__description">
+                    MoviePort isn’t just about browsing films – it’s about making your movie experience seamless and enjoyable. Check out the key features below!
+                </p>
+            </section>
+            <section class="discover">
+                <h2 class="discover__title">Ready to Discover Your Next Favorite Movie?</h2>
+                <a href="./pages/auth.html">Sign Up & Start Exploring</a>
+            </section>
         </div>
     </main>
     <footer class="footer">
@@ -56,8 +132,10 @@
             <p class="footer__copyright">© 2025 All rights reserved</p>
         </div>
     </footer>  
-    
+</div>
     <script src="./js/header.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main_swiper.js"></script>
+    <script src="./js/genre_slider.js"></script>
 </body>
 </html>

@@ -15,10 +15,18 @@
     --main-font: "Varela Round";
     /* font-sizes */
 
+    --mobile-font-size: 16px;
+    --tablet-font-size: 18px;
+    --desktop-font-size: 20px;
+
     /* animations */
 
     /* others */
     --mobile-width: 320px;
     --tablet-width: 768px;
     --desktop-width: 1024px;
+
+    /* paddings/margins */
+
+    --mobile-section-padding: 30px;
 }
