@@ -22,7 +22,7 @@
             <nav class="header__menu">
                 <ul>
                     <li><a href="../index.html" class="link header__menu-link">Home</a></li>
-                    <li><a href="#" class="link header__menu-link">Movies</a></li>
+                    <li><a href="./movies.html" class="link header__menu-link">Movies</a></li>
                     <li><a href="#" class="link header__menu-link">Profile</a></li>
                     <li><a href="./about_us.html" class="link header__menu-link">About us</a></li>
                 </ul>
@@ -34,15 +34,24 @@
             <div class="main__inner">
                 <div class="background main__background visually-hidden"></div>
                 <div class="popup-container main__popup-container">
-                    <button class="button popup-container__button">
+                    <button class="button popup-container__button display--none">
                         <img class="popup-container__close-icon" src="../assets/icons/cross.svg" alt="close_icon">
                     </button>
                     <form class="popup-container__form">
                         <label for="genre">Genre</label>
-                        <select class="popup-container__form-select" name="genre" id="genre"></select>
-                        <label for="year">Year</label>
-                        <select class="popup-container__form-select" name="year" id="year"></select>
-                        <input class="popup-container__form-button" type="button" value="Watch!">
+                        <select class="popup-container__form-select select__genre display--none" name="genre" id="genre"></select>
+                        <label>Year</label>
+                        <div class="form__year-selection__inner">
+                            <div class="form__year-selection__item">
+                                <label for="release_date_gte">from</label>
+                                <input type="date" class="form__year-selection__input display--none" name="primary_release_date_gte" id="primary_release_date_gte"></select>
+                            </div>
+                            <div class="form__year-selection__item">
+                                <label for="release_date_lte">to</label>
+                                <input type="date" class="form__year-selection__input display--none" name="primary_release_date_lte" id="primary_release_date_lte"></select>
+                            </div>
+                        </div>
+                        <input class="popup-container__form-button display--none" type="submit" id="filter_submit" value="Watch!">
                     </form>
                 </div>
                 <section class="main__filter-search">
@@ -53,51 +62,21 @@
                         </button>
 
                         <form class="main__filter-search__form">
-                            <input class="main__filter-search__input" type="text" placeholder="Search">
-                            <button class="button main__filter-search__button button--transparent" type="button">
+                            <input class="main__filter-search__input" name="search" id="search" type="text" placeholder="Search">
+                            <input type="hidden" name="do" value="search">
+                            <button class="button main__filter-search__button button--transparent">
                                 <img class="button main__filter-search__icon" src="../assets/icons/search.svg" alt="search_icon">
                             </button>
                         </form>
                     </div>
                 </section>
                 <section class="main__movies padding--medium">
-                    <ul class="main__movies-list">
-                        <li class="main__movies-item">
-                            <a href="#" class="link main__movies-item__link">
-                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
-                                <p class="main__movies-item__title">Title</p>
-                                <p class="main__movies-item__description">year, genre</p>
-                            </a>
-                        </li>
-                        <li class="main__movies-item">
-                            <a href="#" class="link main__movies-item__link">
-                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
-                                <p class="main__movies-item__title">Title</p>
-                                <p class="main__movies-item__description">year, genre</p>
-                            </a>
-                        </li>
-                        <li class="main__movies-item">
-                            <a href="#" class="link main__movies-item__link">
-                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
-                                <p class="main__movies-item__title">Title</p>
-                                <p class="main__movies-item__description">year, genre</p>
-                            </a>
-                        </li>
-                        <li class="main__movies-item">
-                            <a href="#" class="link main__movies-item__link">
-                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
-                                <p class="main__movies-item__title">Title</p>
-                                <p class="main__movies-item__description">year, genre</p>
-                            </a>
-                        </li>
-                        <li class="main__movies-item">
-                            <a href="#" class="link main__movies-item__link">
-                                <div class="main__movies-image-wrapper"><img class="main__movies-item__image" src="" alt="movie_image"></div>
-                                <p class="main__movies-item__title">Title</p>
-                                <p class="main__movies-item__description">year, genre</p>
-                            </a>
-                        </li>                        
-                    </ul>
+                    <ul class="main__movies-list"></ul>
+                </section>
+                <section class="main__pagination">
+                    <div class="main__pagination-inner">
+
+                    </div>
                 </section>
             </div>
         </div>
@@ -119,6 +98,8 @@
             <p class="footer__copyright">© 2025 All rights reserved</p>
         </div>
     </footer>    
+
+    <script src="../js/Pagination.js"></script>
 
     <script src="../js/header.js"></script>
     <script src="../js/movies.js"></script>
