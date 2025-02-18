@@ -1,4 +1,4 @@
-import { API_KEY } from '../config/config.local.js';
+// import { API_KEY } from '../config/config.local.js';
 
 async function initMovieSlider() {
     const movies = await getPopularMovies();

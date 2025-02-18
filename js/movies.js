@@ -1,4 +1,4 @@
-import { API_KEY } from '../config/config.local.js';
+// import { API_KEY } from '../config/config.local.js';
 const filterButtonOpen = document.querySelector('.main__filter-button');
 const filterButtonClose = document.querySelector('.popup-container__button');
 const mainBackground = document.querySelector('.main__background');
