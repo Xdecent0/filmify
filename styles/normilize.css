@@ -362,3 +362,6 @@ https://serp.co/tools/css-reset/
     list-style: none;
   }
   
+  html,body {
+    height: 100%;
+  }

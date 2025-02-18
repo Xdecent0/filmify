@@ -15,6 +15,14 @@
     }
 }
 
+body {
+    font-family: var(--main-font), serif;
+    font-weight: 500;
+    font-style: normal;
+
+    background-color: var(--light-main-color);
+}
+
 .popup-container {
     z-index: 2;
     background-color: #fff;
@@ -77,6 +85,15 @@
     padding: 5px;
 }
 
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+  
 .text-cut-2-lines {
     display: -webkit-box;
     -webkit-line-clamp: 2;

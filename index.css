@@ -4,13 +4,7 @@
 @import url("./styles/header.css");
 @import url("./styles/footer.css");
 
-body {
-    font-family: var(--main-font), serif;
-    font-weight: 700;
-    font-style: normal;
 
-    background-color: var(--light-main-color);
-}
 
 
 
