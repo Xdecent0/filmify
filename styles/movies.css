@@ -169,6 +169,7 @@
 .main__popup-container--open  {
     width: 90vw;
     height: 60vh;
+    min-height: fit-content;
     opacity: 1;
 }
 
@@ -198,9 +199,30 @@
     margin-bottom: 15px;
 }
 
+.form__year-selection__input {
+    height: 50px;
+}
+
+.form__year-selection__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form__year-selection__item {
+    display: flex;
+    flex-direction: column;
+
+    width: 45%;
+}
+
 .popup-container__form-button {
     height: 50px;
 }
+
+
 
 .main__movies-item__link {
     display: block;

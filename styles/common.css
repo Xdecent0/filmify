@@ -89,3 +89,7 @@
     pointer-events: none;
     cursor: default;
 }
+
+.display--none {
+    display: none;
+}

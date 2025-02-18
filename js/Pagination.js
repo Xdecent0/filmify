@@ -1,44 +1,58 @@
 class Pagination{
     
     constructor(currentPage, totalPages, fov){
-        this.currentPage = currentPage;
+        this.currentPage = Math.max(1, Math.min(currentPage, totalPages));
         this.totalPages = totalPages;
-        this.fov = fov;
+        this.fov = Math.max(2, fov);
     }
 
     buildPagination() {
-        let html = '';
+        if (this.totalPages <= 1) {
+            return ``;
+        }
 
-        
-        if(this.currentPage == 1) {
-            html += `<a class="link pagination__link pagination__link--chosen link--disabled" href="?page=1">1</a>`;
-            for(var i = 2; i <= this.fov; i++){
-                html += `<a class="link pagination__link" href="?page=${i}">${i}</a>`;
+        let builtUrlParams = '';
+
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.forEach((val, key) => {
+            if(key != 'page') { builtUrlParams += `&${key}=${val}`}
+        });
+
+        let html = '';
+        let startPage, endPage;
+
+        html += `<a class="link pagination__link ${this.currentPage === 1 ? 'pagination__link--chosen link--disabled' : ''}" href="?page=1${builtUrlParams}">1</a>`;
+
+        if (this.totalPages <= this.fov + 2) {
+            startPage = 2;
+            endPage = this.totalPages - 1;
+        } else {
+            startPage = Math.max(2, this.currentPage - Math.floor(this.fov / 2));
+            endPage = Math.min(this.totalPages - 1, this.currentPage + Math.floor(this.fov / 2));
+
+            if (this.currentPage - startPage < Math.floor(this.fov / 2)) {
+                endPage = Math.min(this.totalPages - 1, endPage + (Math.floor(this.fov / 2) - (this.currentPage - startPage)));
             }
-            html += `<a class="link pagination__link link--disabled" disabled="disabled">...</a>`;
-            html += `<a class="link pagination__link" href="?page=${this.totalPages}">${this.totalPages}</a>`;
+            if (endPage - this.currentPage < Math.floor(this.fov / 2)) {
+                startPage = Math.max(2, startPage - (Math.floor(this.fov / 2) - (endPage - this.currentPage)));
+            }
         }
-        else if(this.currentPage == this.totalPages) {
-            html += `<a class="link pagination__link" href="?page=1">1</a>`;
-            html += `<a class="link pagination__link link--disabled" disabled="disabled">...</a>`;
-            for(var i = this.currentPage-this.fov+1; i < this.currentPage; i++){
-                html += `<a class="link pagination__link" href="?page=${i}">${i}</a>`;
-            }
-            html += `<a class="link pagination__link pagination__link--chosen link--disabled" href="?page=${this.totalPages}">${this.totalPages}</a>`;
+
+        if (startPage > 2) {
+            html += `<a class="link pagination__link link--disabled">...</a>`;
         }
-        else {
-            html += `<a class="link pagination__link" href="?page=1">1</a>`;
-            if(this.currentPage > this.fov) html += `<a class="link pagination__link link--disabled" disabled="disabled">...</a>`;
-            for (let i = Math.max(2, this.currentPage - Math.round(this.fov / 2)); i < this.currentPage; i++) {
-                html += `<a class="link pagination__link" href="?page=${i}">${i}</a>`;
-            }
-            html += `<a class="link pagination__link pagination__link--chosen link--disabled" href="?page=${this.currentPage}">${this.currentPage}</a>`;
-            for(let i = this.currentPage+1;i<=Math.min(499, this.currentPage+Math.round(this.fov/2));i++) { 
-                html += `<a class="link pagination__link" href="?page=${i}">${i}</a>`; 
-            }
-            if(this.currentPage < this.totalPages-this.fov+1) html += `<a class="link pagination__link link--disabled" disabled="disabled">...</a>`;
-            html += `<a class="link pagination__link" href="?page=${this.totalPages}">${this.totalPages}</a>`;
+
+        for (let i = startPage; i <= endPage; i++) {
+            html += `<a class="link pagination__link ${i === this.currentPage ? 'pagination__link--chosen link--disabled' : ''}" href="?page=${i}${builtUrlParams}">${i}</a>`;
         }
-        return html;        
+
+        if (endPage < this.totalPages - 1) {
+            html += `<a class="link pagination__link link--disabled">...</a>`;
+        }
+
+        html += `<a class="link pagination__link ${this.currentPage === this.totalPages ? 'pagination__link--chosen link--disabled' : ''}" href="?page=${this.totalPages}${builtUrlParams}">${this.totalPages}</a>`;
+
+        return html;
+         
     }
 };
