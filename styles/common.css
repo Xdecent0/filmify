@@ -93,7 +93,8 @@ body {
 
 main {
     flex: 1 1 auto;
-  
+}
+
 .text-cut-2-lines {
     display: -webkit-box;
     -webkit-line-clamp: 2;
