@@ -128,6 +128,15 @@
     padding: 5px;
 }
 
+.main__movies-item:hover { 
+    transition: 0.35s;
+    background-color: var(--light-third-color);
+}
+
+.main__movies-item:hover .main__movies-item__title { 
+    text-decoration: underline;
+}
+
 .main__movies-image-wrapper {
     /* background-color: #c1c1c1; */
     width: 100%;
@@ -138,6 +147,7 @@
 .main__movies-item__title {
     margin-top: 5px;
     font-size: 14px;
+    font-weight: 700;
 
     width: 100%;
 }
