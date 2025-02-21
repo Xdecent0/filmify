@@ -85,6 +85,7 @@ https://serp.co/tools/css-reset/
   a, a:hover, a:focus, a:visited, a:active {
     text-decoration: none;
     background-color: transparent;
+    color:black;
   }
   
   /**

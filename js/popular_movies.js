@@ -40,7 +40,7 @@ function renderMovieSlides(movies) {
                 <div class="movie-slide">
                     <img src="${imagePath}" alt="${movie.title}" class="movie-poster">
                     <div class="movie-info">
-                        <h3 class="movie-title">${movie.title}</h3>
+                        <h3 class="movie-title text-cut-1-lines">${movie.title}</h3>
                         <p class="movie-date">${movie.release_date ? movie.release_date.split('-')[0] : ''}</p>
                         <div class="movie-rating">Rating: ${movie.vote_average.toFixed(1)}</div>
                     </div>

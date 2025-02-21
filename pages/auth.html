@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <title>Login with Firebase</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__inner">
+            <a class="logo logo--medium" href="../index.html">
+                <img class="logo__icon" src="../assets/icons/temp-logo.svg">
+            </a>
+            <button class="button header__menu-button button--transparent" type="button"><img class="header__menu-button__icon" src="../assets/icons/menu.svg"></button>
+            <div class="background menu__background visually-hidden"></div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="../index.html" class="link header__menu-link">Home</a></li>
+                    <li><a href="../pages/movies.html" class="link header__menu-link">Movies</a></li>
+                    <li><a href="#" class="link header__menu-link">Profile</a></li>
+                    <li><a href="../pages/about_us.html" class="link header__menu-link">About us</a></li>
+                    <li><a href="../pages/auth.html" class="link header__menu-link">Auth</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+          <div class="auth">
+            <div class="auth__section" id="authSection">
+              <h2 class="auth__title">Welcome</h2>
+        
+              <!-- Login Form -->
+              <div class="auth__form auth__form--login" id="loginForm">
+                <h3 class="auth__title">Login</h3>
+                <div class="auth__input-group">
+                  <input type="email" id="loginEmail" class="auth__input" placeholder="Email" required />
+                </div>
+                <div class="auth__input-group">
+                  <input type="password" id="loginPassword" class="auth__input" placeholder="Password" required />
+                </div>
+                <button class="auth__button auth__button--submit" id="loginWithEmailBtn">Login</button>
+        
+                <div class="auth__divider"><span>OR</span></div>
+        
+                <button class="auth__button auth__button--google" id="loginWithGoogleBtn">Login with Google</button>
+        
+                <div class="auth__switch-text">
+                  Don't have an account? <span class="auth__link" id="switchToSignup">Sign up</span>
+                </div>
+              </div>
+        
+              <!-- Signup Form -->
+              <div class="auth__form auth__form--signup" id="signupForm">
+                <h3 class="auth__title">Create Account</h3>
+                <div class="auth__input-group">
+                  <input type="email" id="signupEmail" class="auth__input" placeholder="Email" required />
+                </div>
+                <div class="auth__input-group">
+                  <input type="password" id="signupPassword" class="auth__input" placeholder="Password" required />
+                </div>
+                <button class="auth__button auth__button--submit" id="signupWithEmailBtn">Sign Up</button>
+        
+                <div class="auth__divider"><span>OR</span></div>
+        
+                <button class="auth__button auth__button--google" id="signupWithGoogleBtn">Sign up with Google</button>
+        
+                <div class="auth__switch-text">
+                  Already have an account? <span class="auth__link" id="switchToLogin">Login</span>
+                </div>
+              </div>
+        
+              <div class="auth__error" id="error"></div>
+            </div>
+        
+            <div class="auth__section" id="logoutSection" style="display: none;">
+              <div class="auth__user-details" id="userDetails">
+                <img id="userPhoto" class="auth__user-photo" src="" alt="User Photo">
+                <p id="userName"></p>
+              </div>
+              <button class="auth__button auth__button--submit" id="logoutBtn">Logout</button>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer class="footer">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="../index.html" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../pages/movies.html" class="footer__link">Movies</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../pages/profile.html" class="footer__link">Profile</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../pages/about_us.html" class="footer__link">About Us</a>
+                </li>
+            </ul>
+        <div class="footer__text">
+            <p class="footer__author">made by DUET Students</p>
+            <p class="footer__copyright">© 2025 All rights reserved</p>
+        </div>
+    </footer>  
+</div>
+    <script src="../js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

@@ -95,6 +95,14 @@ main {
     flex: 1 1 auto;
 }
 
+.text-cut-1-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .text-cut-2-lines {
     display: -webkit-box;
     -webkit-line-clamp: 2;
