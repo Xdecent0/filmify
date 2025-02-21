@@ -217,6 +217,7 @@
     margin: 0;
     font-size: 14px;
     color: #ddd;
+    margin-top: 10px;
 }
 
 .movie-rating {
@@ -225,7 +226,9 @@
     border-radius: 4px;
     font-size: 14px;
     display: inline-block;
+    margin-top: 10px;
 }
+
 
 
 

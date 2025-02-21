@@ -1,6 +1,13 @@
 .footer {
     background-color: var(--light-secondary-color);
     padding-top: 20px;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+.footer {
+    font-size: 25px;
+}
 }
 
 .footer__list {
